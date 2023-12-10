@@ -186,7 +186,7 @@ export default function Home() {
   );
 
   return (
-    <div className={"font-M_PLUS_2"}>｛
+    <div className={"font-M_PLUS_2"}>
       <Meta />
       {/*
       <Introduction
