@@ -12,7 +12,6 @@ import {
 import { Link } from "./link";
 
 type Props = {
-  openAiKey: string;
   systemPrompt: string;
   chatLog: Message[];
   koeiroParam: KoeiroParam;
@@ -28,9 +27,8 @@ type Props = {
   onChangeKoeiromapKey: (event: React.ChangeEvent<HTMLInputElement>) => void;
 };
 export const Settings = ({
-  openAiKey,
-  chatLog,
   systemPrompt,
+  chatLog,
   koeiroParam,
   koeiromapKey,
   onClickClose,
@@ -43,6 +41,7 @@ export const Settings = ({
   onClickResetSystemPrompt,
   onChangeKoeiromapKey,
 }: Props) => {
+  const openAiKey = process.env.REACT_APP_OPENAI_KEY;
   return (
     <div className="absolute z-40 w-full h-full bg-white/80 backdrop-blur ">
       <div className="absolute m-24">
